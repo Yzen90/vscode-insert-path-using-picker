@@ -9,5 +9,5 @@ This extension adds:
 ©2025 Edgar Montiel Cruz
 </p>
 <p align="center" width="100%">
-  <img src="images/hecho-en-mexico.png" />
+  <img src="https://github.com/Yzen90/vscode-insert-path-using-picker/raw/main/images/hecho-en-mexico.png" />
 </p>
