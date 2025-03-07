@@ -13,7 +13,7 @@
 	},
 	"version": "1.0.0",
 	"engines": {
-		"vscode": "^1.76.0"
+		"vscode": "^1.98.0"
 	},
 	"main": "./build/extension.js",
 	"activationEvents": [],
