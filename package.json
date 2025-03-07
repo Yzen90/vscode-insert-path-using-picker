@@ -4,6 +4,7 @@
 	"description": "Insert a path in the editor using the file/folder picker.",
 	"license": "GPL-3.0-only",
 	"author": "Edgar Montiel Cruz",
+	"publisher": "yzen",
 	"keywords": ["insert path"],
 	"categories": ["Other"],
 	"icon": "icon.png",
