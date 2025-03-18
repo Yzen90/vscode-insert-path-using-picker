@@ -1,142 +1,140 @@
 {
-	"name": "vscode-insert-path-using-picker",
-	"displayName": "Insert Path Using Picker",
-	"description": "Insert a path in the editor using the file/folder picker.",
-	"license": "GPL-3.0-only",
-	"author": "Edgar Montiel Cruz",
-	"publisher": "yzen",
-	"keywords": ["insert path"],
-	"categories": ["Other"],
-	"icon": "icon.png",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Yzen90/vscode-insert-path-using-picker"
-	},
-	"version": "1.0.0",
-	"engines": {
-		"vscode": "^1.98.0"
-	},
-	"main": "./build/extension.js",
-	"activationEvents": [],
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.insertPathCommand",
-				"title": "Insert Path: File"
-			},
-			{
-				"command": "extension.insertFolderPathCommand",
-				"title": "Insert Path: Folder"
-			},
-			{
-				"command": "extension.insertPath",
-				"title": "File Path"
-			},
-			{
-				"command": "extension.insertFolderPath",
-				"title": "Folder Path"
-			},
-			{
-				"command": "extension.insertPathEscaped",
-				"title": "File Path Escaped"
-			},
-			{
-				"command": "extension.insertFolderPathEscaped",
-				"title": "Folder Path Escaped"
-			},
-			{
-				"command": "extension.insertPathRaw",
-				"title": "Raw File Path"
-			},
-			{
-				"command": "extension.insertFolderPathRaw",
-				"title": "Raw Folder Path"
-			}
-		],
-		"menus": {
-			"commandPalette": [
-				{
-					"command": "extension.insertPathCommand",
-					"when": "editorIsOpen"
-				},
-				{
-					"command": "extension.insertFolderPathCommand",
-					"when": "editorIsOpen"
-				},
-				{
-					"command": "extension.insertPath",
-					"when": "false"
-				},
-				{
-					"command": "extension.insertFolderPath",
-					"when": "false"
-				},
-				{
-					"command": "extension.insertPathEscaped",
-					"when": "false"
-				},
-				{
-					"command": "extension.insertFolderPathEscaped",
-					"when": "false"
-				},
-				{
-					"command": "extension.insertPathRaw",
-					"when": "false"
-				},
-				{
-					"command": "extension.insertFolderPathRaw",
-					"when": "false"
-				}
-			],
-			"editor/context": [
-				{
-					"submenu": "insert-path-using-picker",
-					"when": "editorTextFocus",
-					"group": "1_modification"
-				}
-			],
-			"insert-path-using-picker": [
-				{
-					"command": "extension.insertPath"
-				},
-				{
-					"command": "extension.insertFolderPath"
-				},
-				{
-					"command": "extension.insertPathEscaped",
-					"when": "isWindows"
-				},
-				{
-					"command": "extension.insertFolderPathEscaped",
-					"when": "isWindows"
-				},
-				{
-					"command": "extension.insertPathRaw",
-					"when": "isWindows"
-				},
-				{
-					"command": "extension.insertFolderPathRaw",
-					"when": "isWindows"
-				}
-			]
-		},
-		"submenus": [
-			{
-				"id": "insert-path-using-picker",
-				"label": "Insert a Path"
-			}
-		]
-	},
-	"scripts": {
-		"build": "tsc",
-		"vscode:prepublish": "npm run build"
-	},
-	"devDependencies": {
-		"@tsconfig/strictest": "^2.0.5",
-		"@types/vscode": "^1.98.0",
-		"typescript": "^5.8.2"
-	},
-	"dependencies": {
-		"@types/node": "^22.13.9"
-	}
+  "name": "vscode-insert-path-using-picker",
+  "displayName": "Insert Path Using Picker",
+  "description": "Insert a path in the editor using the file/folder picker.",
+  "license": "GPL-3.0-only",
+  "author": "Edgar Montiel Cruz",
+  "publisher": "yzen",
+  "keywords": ["insert path"],
+  "categories": ["Other"],
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yzen90/vscode-insert-path-using-picker"
+  },
+  "version": "1.1.0",
+  "engines": {
+    "vscode": "^1.98.0"
+  },
+  "main": "./build/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.insertPathCommand",
+        "title": "Insert Path: File"
+      },
+      {
+        "command": "extension.insertFolderPathCommand",
+        "title": "Insert Path: Folder"
+      },
+      {
+        "command": "extension.insertPath",
+        "title": "File Path"
+      },
+      {
+        "command": "extension.insertFolderPath",
+        "title": "Folder Path"
+      },
+      {
+        "command": "extension.insertPathEscaped",
+        "title": "File Path Escaped"
+      },
+      {
+        "command": "extension.insertFolderPathEscaped",
+        "title": "Folder Path Escaped"
+      },
+      {
+        "command": "extension.insertPathRaw",
+        "title": "Raw File Path"
+      },
+      {
+        "command": "extension.insertFolderPathRaw",
+        "title": "Raw Folder Path"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "extension.insertPathCommand",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "extension.insertFolderPathCommand",
+          "when": "editorIsOpen"
+        },
+        {
+          "command": "extension.insertPath",
+          "when": "false"
+        },
+        {
+          "command": "extension.insertFolderPath",
+          "when": "false"
+        },
+        {
+          "command": "extension.insertPathEscaped",
+          "when": "false"
+        },
+        {
+          "command": "extension.insertFolderPathEscaped",
+          "when": "false"
+        },
+        {
+          "command": "extension.insertPathRaw",
+          "when": "false"
+        },
+        {
+          "command": "extension.insertFolderPathRaw",
+          "when": "false"
+        }
+      ],
+      "editor/context": [
+        {
+          "submenu": "insert-path-using-picker",
+          "when": "editorTextFocus",
+          "group": "1_modification"
+        }
+      ],
+      "insert-path-using-picker": [
+        {
+          "command": "extension.insertPath"
+        },
+        {
+          "command": "extension.insertFolderPath"
+        },
+        {
+          "command": "extension.insertPathEscaped",
+          "when": "isWindows"
+        },
+        {
+          "command": "extension.insertFolderPathEscaped",
+          "when": "isWindows"
+        },
+        {
+          "command": "extension.insertPathRaw",
+          "when": "isWindows"
+        },
+        {
+          "command": "extension.insertFolderPathRaw",
+          "when": "isWindows"
+        }
+      ]
+    },
+    "submenus": [
+      {
+        "id": "insert-path-using-picker",
+        "label": "Insert a Path"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "tsc",
+    "vscode:prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^22.13.10",
+    "@types/vscode": "^1.98.0",
+    "typescript": "^5.8.2"
+  }
 }
